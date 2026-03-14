@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.greatvision.net/sitemap.xml
+
+# Disallow admin or private paths (none currently, placeholder)
+# Disallow: /admin/
