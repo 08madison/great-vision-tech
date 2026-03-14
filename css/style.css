@@ -1006,4 +1006,87 @@ section { padding: 80px 0; }
   .hero-actions { flex-direction: column; }
   .btn { width: 100%; justify-content: center; }
   .cta-actions { flex-direction: column; align-items: center; }
+  .cta-social-icons { gap: 10px; }
+  .cta-social-btn { padding: 10px 14px; font-size: 0.8rem; }
 }
+
+/* ===========================
+   CTA SOCIAL MEDIA ICONS
+   =========================== */
+.cta-social {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+.cta-social-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 20px;
+}
+.cta-social-icons {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 20px;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  white-space: nowrap;
+}
+.cta-social-btn:hover {
+  transform: translateY(-2px);
+  color: #fff;
+}
+/* Brand colors on hover */
+.cta-social-btn.youtube:hover  { background: #FF0000; border-color: #FF0000; box-shadow: 0 4px 18px rgba(255,0,0,0.35); }
+.cta-social-btn.x-twitter:hover { background: #000000; border-color: #555; box-shadow: 0 4px 18px rgba(0,0,0,0.5); }
+.cta-social-btn.linkedin:hover  { background: #0A66C2; border-color: #0A66C2; box-shadow: 0 4px 18px rgba(10,102,194,0.4); }
+.cta-social-btn.discord:hover   { background: #5865F2; border-color: #5865F2; box-shadow: 0 4px 18px rgba(88,101,242,0.4); }
+
+/* ===========================
+   FOOTER SOCIAL ICONS
+   =========================== */
+.footer-social {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+.footer-social-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.footer-social-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.footer-social-icon[aria-label="YouTube"]:hover    { background: #FF0000; border-color: #FF0000; color: #fff; }
+.footer-social-icon[aria-label="X (Twitter)"]:hover { background: #000; border-color: #000; color: #fff; }
+.footer-social-icon[aria-label="LinkedIn"]:hover   { background: #0A66C2; border-color: #0A66C2; color: #fff; }
+.footer-social-icon[aria-label="Discord"]:hover    { background: #5865F2; border-color: #5865F2; color: #fff; }
