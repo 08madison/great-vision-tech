@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>H100 vs A100: GPU Choice for Fine-tuning | Great Vision Tech Blog</title>
+  <meta name="description" content="A practical comparison of NVIDIA H100 and A100 for LLM fine-tuning. Memory, throughput, cost analysis for AI developers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <style>
+    .article-content { max-width: 720px; margin: 0 auto; }
+    .article-content h2 { color: var(--text-primary); font-size: 1.3rem; margin: 40px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .article-content h3 { color: var(--text-primary); font-size: 1.05rem; margin: 24px 0 10px; }
+    .article-content p { font-size: 0.95rem; margin-bottom: 16px; line-height: 1.8; }
+    .article-content ul, .article-content ol { padding-left: 24px; margin-bottom: 16px; }
+    .article-content li { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 8px; line-height: 1.7; }
+    .article-content strong { color: var(--text-primary); }
+    .article-meta { display: flex; gap: 16px; align-items: center; margin-bottom: 32px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">GREAT VISION <span>TECH</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gpu-rental.html">GPU Rental</a></li>
+        <li><a href="token-supply.html">Token Supply</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="page-hero" style="padding-bottom: 40px;">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="blog.html">Blog</a>
+        <span>/</span>
+        <span>H100 vs A100</span>
+      </div>
+      <span class="section-tag">GPU Guide</span>
+      <h1 style="max-width: 720px; margin: 16px auto;">H100 vs A100: Which GPU Should You Choose for LLM Fine-Tuning?</h1>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="article-content">
+        <div class="article-meta">
+          <span class="blog-tag">GPU Guide</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">March 2025</span>
+          <span style="font-size: 0.8rem; color: var(--text-muted);">5 min read</span>
+        </div>
+
+        <p>Choosing between the NVIDIA H100 and A100 is one of the most common questions we get from AI developers. Both are excellent GPUs, but they serve different use cases and budgets. This guide gives you a practical breakdown.</p>
+
+        <h2>Quick Specs Comparison</h2>
+        <div class="gpu-table-wrapper">
+          <table class="gpu-table">
+            <thead>
+              <tr>
+                <th>Spec</th>
+                <th>A100 (80GB)</th>
+                <th>H100 (80GB)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Memory</td>
+                <td>80 GB HBM2e</td>
+                <td>80 GB HBM3</td>
+              </tr>
+              <tr>
+                <td>Memory Bandwidth</td>
+                <td>2 TB/s</td>
+                <td>3.35 TB/s</td>
+              </tr>
+              <tr>
+                <td>FP16 Performance</td>
+                <td>312 TFLOPS</td>
+                <td>989 TFLOPS</td>
+              </tr>
+              <tr>
+                <td>NVLink Bandwidth</td>
+                <td>600 GB/s</td>
+                <td>900 GB/s</td>
+              </tr>
+              <tr>
+                <td>Transformer Engine</td>
+                <td>Gen 1</td>
+                <td>Gen 2 (FP8)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>When to Choose the A100</h2>
+        <p>The A100 remains an excellent choice for most fine-tuning workloads. Here's when it makes sense:</p>
+        <ul>
+          <li><strong>Budget-conscious projects:</strong> A100 rental is significantly cheaper than H100. For many fine-tuning jobs, the cost savings outweigh the performance difference.</li>
+          <li><strong>Models up to 70B parameters:</strong> For LoRA/QLoRA fine-tuning of 7B–70B models, the A100 80GB provides sufficient memory and throughput.</li>
+          <li><strong>Inference serving:</strong> For serving models in production, the A100 offers excellent price-performance.</li>
+          <li><strong>Multi-GPU training on a budget:</strong> Running 4× A100s is often cheaper than 2× H100s with comparable throughput for many workloads.</li>
+        </ul>
+
+        <h2>When to Choose the H100</h2>
+        <p>The H100 is worth the premium in specific scenarios:</p>
+        <ul>
+          <li><strong>Large-scale pre-training:</strong> If you're training from scratch or doing full fine-tuning on 70B+ models, the H100's FP8 Transformer Engine provides a significant speedup.</li>
+          <li><strong>Time-critical experiments:</strong> The H100 is roughly 2–3× faster than the A100 for transformer workloads. If iteration speed matters, the premium pays off.</li>
+          <li><strong>RLHF and complex pipelines:</strong> Reinforcement learning from human feedback benefits from the H100's higher memory bandwidth and NVLink throughput.</li>
+          <li><strong>Enterprise SLA requirements:</strong> H100 clusters with NVLink provide the highest reliability for production training pipelines.</li>
+        </ul>
+
+        <h2>Practical Recommendation</h2>
+        <div class="highlight-box">
+          <p><strong>For most developers and researchers:</strong> Start with the A100 80GB. It handles the vast majority of fine-tuning tasks at a lower cost. Upgrade to H100 only when you hit throughput bottlenecks or need to train models larger than 70B parameters.</p>
+        </div>
+
+        <h2>Bottom Line</h2>
+        <p>The H100 is faster, but the A100 is more cost-efficient for typical fine-tuning workloads. Choose based on your budget and timeline, not just raw specs.</p>
+
+        <div style="margin-top: 48px; padding: 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);">
+          <h3 style="color: var(--text-primary); margin-bottom: 8px;">Need GPU Compute?</h3>
+          <p style="margin-bottom: 16px;">We offer both A100 and H100 rental with SSH access, CUDA pre-configured, and flexible billing. Contact us for a custom quote.</p>
+          <a href="contact.html" class="btn btn-primary">Get GPU Pricing →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: 1px solid var(--border); padding-top: 24px;">
+        <p>© 2025 GREAT VISION TECHNOLOGY PTE. LTD · All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

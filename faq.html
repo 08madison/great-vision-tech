@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | Great Vision Tech</title>
+  <meta name="description" content="Frequently asked questions about GPU rental and AI token supply at Great Vision Tech. H100, A100, Deepseek, Qwen, billing, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">GREAT VISION <span>TECH</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-page="index.html">Home</a></li>
+        <li><a href="gpu-rental.html" data-page="gpu-rental.html">GPU Rental</a></li>
+        <li><a href="token-supply.html" data-page="token-supply.html">Token Supply</a></li>
+        <li><a href="blog.html" data-page="blog.html">Blog</a></li>
+        <li><a href="faq.html" data-page="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="nav-cta" data-page="contact.html">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>FAQ</span>
+      </div>
+      <span class="section-tag">FAQ</span>
+      <h1>Frequently Asked Questions</h1>
+      <p>Everything you need to know about our GPU rental and AI token services.</p>
+    </div>
+  </div>
+
+  <!-- ===== FAQ CONTENT ===== -->
+  <section>
+    <div class="container">
+
+      <!-- GPU Rental FAQs -->
+      <div style="max-width: 720px; margin: 0 auto;">
+        <h3 style="color: var(--text-primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
+          🖥️ GPU Rental
+        </h3>
+        <div class="faq-list" style="margin-bottom: 48px;">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What GPUs do you offer?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We offer three tiers: <strong>RTX 4090 (24GB)</strong> for small model testing and inference, <strong>A100 (40GB/80GB)</strong> for mid/large model fine-tuning, and <strong>H100 (80GB)</strong> for large LLM training and enterprise workloads. All are available on hourly, daily, or monthly billing.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do I get SSH access to the GPU node?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. You receive full SSH access with root privileges. The environment comes pre-configured with CUDA drivers, PyTorch, and TensorFlow. You can install any additional packages you need.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What frameworks and libraries are pre-installed?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>All nodes come with CUDA, cuDNN, PyTorch, TensorFlow, and common ML libraries pre-installed. You can also install additional packages via pip or conda. Custom environment setups are available on request.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What are the billing options?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We offer <strong>hourly</strong> billing for short experiments, <strong>daily</strong> billing for project work, and <strong>monthly</strong> billing for production or long-running jobs. Monthly plans come with the best rates. Custom enterprise contracts are also available.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is there a student discount?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Verified students and academic researchers receive special discounted rates. Contact us with your student/institutional email to apply for the academic discount.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is the uptime guarantee?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We maintain a 99.9% uptime SLA for all GPU nodes. Our infrastructure is hosted in certified Chinese data centers with redundant power and network connectivity. In the rare event of downtime, we will compensate with additional compute time.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I get a multi-GPU cluster?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. We support multi-GPU configurations for distributed training. Contact us with your requirements — number of GPUs, interconnect needs (NVLink/InfiniBand), and duration — and we'll prepare a custom enterprise quote.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Token Supply FAQs -->
+        <h3 style="color: var(--text-primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
+          🔑 AI Token Supply
+        </h3>
+        <div class="faq-list" style="margin-bottom: 48px;">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are the tokens 100% official and authorized?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, absolutely. All tokens are sourced directly from official channels and are 100% authorized and compliant. We do not deal in gray-market or third-party tokens. Your API calls will work reliably without risk of account suspension.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Which AI models do you support?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We currently support: <strong>Deepseek</strong> (V3/R1), <strong>Qwen</strong> (2.5 series), <strong>Hunyuan</strong> (Tencent), <strong>Doubao</strong> (ByteDance), <strong>Maxmin/MiniMax</strong>, and <strong>Kimi</strong> (Moonshot AI). More models are being added — contact us if you need a specific model.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How quickly are tokens delivered?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Tokens are delivered instantly after payment confirmation in most cases. For large enterprise orders, delivery may take up to a few hours. We will confirm the exact timeline when you place your order.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you offer bulk discounts?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. We offer tiered volume pricing — the more tokens you purchase, the lower the per-token cost. We have packages for individual developers, small teams, and enterprise customers. Contact us for a custom quote based on your estimated monthly usage.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I use tokens for commercial applications?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, all tokens we supply are authorized for commercial use, subject to each model provider's terms of service. We can provide documentation for enterprise compliance requirements upon request.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- General FAQs -->
+        <h3 style="color: var(--text-primary); margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
+          💳 Billing &amp; General
+        </h3>
+        <div class="faq-list" style="margin-bottom: 48px;">
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What payment methods do you accept?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We support major global payment methods including credit/debit cards, bank transfers, and select cryptocurrency options. Contact us to confirm available payment methods for your region.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I get a custom plan combining GPU and tokens?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. We offer bundled plans that combine GPU compute and AI token packages. This is popular with developers who need both infrastructure and model access. Contact us to discuss a combined package.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Where is Great Vision Technology based?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We are registered in Singapore: <strong>GREAT VISION TECHNOLOGY PTE. LTD</strong>, 112 Robinson Road #03-01, Robinson 112, Singapore 068902. We serve customers globally.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How do I get support if something goes wrong?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our technical support team is available 24/7. You can reach us via email at <a href="mailto:info@great-vision.com">info@great-vision.com</a> or through the contact form on our website. We aim to respond within 2 hours for critical issues.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Still have questions -->
+        <div class="highlight-box fade-in" style="text-align: center;">
+          <h3 style="color: var(--text-primary); margin-bottom: 8px;">Still Have Questions?</h3>
+          <p style="margin-bottom: 20px;">Our team is happy to help. Send us a message and we'll get back to you within 24 hours.</p>
+          <a href="contact.html" class="btn btn-primary">Message Us Direct →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">GREAT VISION <span style="color: var(--accent);">TECH</span></a>
+          <p>Cost-effective GPU rental &amp; official AI token supply for global developers, students, and businesses.</p>
+          <p style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted);">112 Robinson Road #03-01<br />Singapore 068902</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="gpu-rental.html">GPU Rental</a></li>
+            <li><a href="token-supply.html">Token Supply</a></li>
+            <li><a href="contact.html">Custom Plans</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 GREAT VISION TECHNOLOGY PTE. LTD · All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
